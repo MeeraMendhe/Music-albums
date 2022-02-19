@@ -1,0 +1,74 @@
+.flex
+{
+    display: flex;
+    height: 70px;
+    width: 100%;
+    color:whitesmoke;
+    background-image: url("http://csshint.com/wp-content/uploads/2020/01/CSS-Animated-Backgrounds-2.gif");
+}
+.div
+{
+    height:70px;
+    width:70px;
+}
+.div>img
+{
+    height: 100%;
+    widows: 100%;
+}
+.name{
+    margin-left: 30px;
+    padding: 25px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.inp>input{
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.inp
+{
+    display:flex
+}
+.inp>button{
+    width: 100px;
+    height: 43px;
+    margin-top: 12px;
+    background-color:white;
+    border:0px;
+    border-radius: 10px;
+    margin-left: 10px;
+    color: #000;
+    font-size: 15px;
+    font-weight: 300;
+}
+.select
+{
+    width: 100px;
+    height: 43px;
+    margin-top: 12px;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+.name1
+{
+    margin-left: 30px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.login
+{
+        width: 100px;
+        height: 43px;
+        margin-top: 12px;
+        background-color:white;
+        border:0px;
+        border-radius: 10px;
+        margin-left: 10px;
+        color: #000;
+        font-size: 15px;
+        font-weight: 300;
+}
