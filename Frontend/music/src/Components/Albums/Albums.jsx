@@ -1,18 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from "./Albums.module.css"
 import {Navigate} from "react-router-dom"
-import Navbar from '../Navbar/Navbar'
-const Albums = ({album_name,image,_id}) => {
+const Albums = ({image,_id}) => {
+  const [flag,setFlag]=useState(false)
     const handleClick = ()=>
     {
-      <Navigate to="detail" /> 
+     setFlag(prev=>!prev) 
     }
   return (
     
-  <div>
+  <div key={_id}>
 <div className={styles.div}>
   <img onClick={handleClick} src={image} alt=""/>
 </div>
+{
+    flag?(
+      <Navigate to={"/detail/"+_id}  />
+    ):""
+}
 </div>
   )
 }
