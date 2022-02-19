@@ -8,22 +8,30 @@
     color:whitesmoke;
   
 }
+.img{
+    height: 300px;
+    width: 200px;
+    padding:30px
+}
+.img>img
+{
+    height: 100%;
+    width: 100%;
+}
 .grid
 {
     display: grid;
     grid-template-columns: repeat(5,18%);
     gap: 2%;
 }
-.btn
-{
-    width: 100px;
+.btn{
     height: 43px;
     margin-top: 12px;
     background-color:white;
     border:0px;
     border-radius: 10px;
-    margin-left: 10px;
     color: #000;
     font-size: 15px;
     font-weight: 300;
+    width: 150px;
 }

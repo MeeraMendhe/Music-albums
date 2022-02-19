@@ -4,8 +4,11 @@ const Album=require("../models/albums.model")
 
 router.get("/",async(req,res)=>
 {
+    const page=+req.query.page||1;
+    const limit=+req.query.limit||5;
+    const offset=(page-1)*limit
    try{
-    const albums=await Album.find({}).populate("song").lean().exec();
+    const albums=await Album.find({}).skip(offset).limit(limit).populate("song").lean().exec();
     res.status(200).send(albums)
    }catch(e){
        console.log(e)

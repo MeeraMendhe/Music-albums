@@ -17,17 +17,23 @@
     widows: 100%;
 }
 .name{
-    margin-left: 30px;
-    padding: 25px;
-    font-size: 20px;
-    font-weight: 700;
+    margin-left: 40px;
+    margin-top: 12px;
+    background-color:white;
+    border-radius: 10px;
+    border:0px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #000;
+    height: 45px;
 }
 .inp>input{
     width: 400px;
     height: 40px;
     border-radius: 10px;
     margin-top: 10px;
-    margin-left: 50px;
+    margin-left: 150px;
+    
 }
 .inp
 {
@@ -45,20 +51,6 @@
     font-size: 15px;
     font-weight: 300;
 }
-.select
-{
-    width: 100px;
-    height: 43px;
-    margin-top: 12px;
-    margin-left: 30px;
-    border-radius: 10px;
-}
-.name1
-{
-    margin-left: 30px;
-    font-size: 20px;
-    font-weight: 700;
-}
 .login
 {
         width: 100px;
@@ -67,7 +59,7 @@
         background-color:white;
         border:0px;
         border-radius: 10px;
-        margin-left: 10px;
+        margin-left: 150px;
         color: #000;
         font-size: 15px;
         font-weight: 300;

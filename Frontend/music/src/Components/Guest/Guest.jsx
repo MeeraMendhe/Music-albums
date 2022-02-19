@@ -6,19 +6,20 @@ import Navbar from '../Navbar/Navbar';
 
 const Guest = () => {
     const [data,setData]=useState([])
+    const [page,setPage]=useState(1)
     useEffect(()=>
     {
      axios({
   method: 'get',
-  url: 'http://localhost:1234/album',
+  url: `http://localhost:1234/album?page=${page}`,
   headers:{
       "Content-Type":"application/json"
-  }
+  },
 })
   .then(function (response) {
   setData(response.data)
   });
-    },[])
+    },[page])
  //console.log(data)
   return (
    <div>
@@ -34,6 +35,9 @@ const Guest = () => {
               ))
           }
       </div>
+      <button className={styles.btn}disabled={page===1} onClick={()=>setPage(prev=>prev-1)}>Previous</button>
+      <button className={styles.btn} onClick={()=>setPage(prev=>prev+1)}>Next</button>
+    
   </div>
     </div>
    </div>
