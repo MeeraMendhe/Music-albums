@@ -21,8 +21,19 @@ router.get("/:id",async(req,res)=>
     const albums=await Album.findById(req.params.id).populate("song").lean().exec();
     res.status(200).send(albums)
    }catch(e){
-       console.log(e)
+      // console.log(e)
        res.status(400).send("Bad request",e)
    }
+})
+router.get("/sort",async(req,res)=>
+{
+    let sortParam=req.query.sort||0
+    try{
+        const albums=await Album.find({}).sort({year:sortParam}).populate("song").lean().exec();
+        res.status(200).send(albums)
+       }catch(e){
+          // console.log(e)
+           res.status(400).send("Bad request",e)
+       }
 })
 module.exports=router
